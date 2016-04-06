@@ -1,0 +1,10 @@
+{
+  "extName" : {
+    "message" : "Retags for Tumblr",
+    "description" : "Extension name"
+  },
+  "extDescription" : {
+    "message" : "Retags for reblog...",
+    "description" : "Extension description"
+  }
+}
