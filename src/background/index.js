@@ -55,7 +55,8 @@ chrome.webRequest.onCompleted.addListener(function (details) {
                         let selector = '[data-post-id="'+obj.parent_id+'"] a.tag-link';
                         let doc = document.implementation.createHTMLDocument("example");
                         doc.documentElement.innerHTML = e.data;
-                        let tags = doc.documentElement.querySelectorAll(selector);
+                        let tagsHTML = doc.documentElement.querySelectorAll(selector);
+                        let tags = _.map(tagsHTML, function(tag){ return tag.innerText});
                         console.log(tags);
                     }
                     worker.postMessage(obj.reblog_source);
